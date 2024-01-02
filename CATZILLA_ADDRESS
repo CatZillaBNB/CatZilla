@@ -3,7 +3,7 @@
 pragma solidity ^0.8.18;
 
 // MIT License
-// Copyright (c) [2023] [Demarco Lucas]
+// Copyright (c) [2024] [Demarco Lucas]
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -605,14 +605,14 @@ contract CATZ is Context, IERC20 {
     mapping(address => mapping(address => uint256)) private _allowances;
     mapping(address => bool) public _isExcludedFromFee;
     address payable public Wallet_Marketing =
-        payable(0xD53BeF3BC0Caf3D97bF0EF8b32543Fa4c7763d58);
+        payable(0x8a9B1d99fF0AD7eAa837bd0249CE50dD7eCB6C6A);
     address payable public Wallet_Dev =
-        payable(0x87e3AABabc4830DFA32AF78c7b5D3b6A05d6aB51);
+        payable(0x158B41936A6d5f832c8515f1B14B1c02027C1b42);
     address payable public constant Wallet_Burn =
         payable(0x000000000000000000000000000000000000dEaD);
     uint256 private constant MAX = ~uint256(0);
     uint8 private constant _decimals = 9;
-    uint256 private _tTotal = 100000000000 * 10**2 * 10**2 * 10**_decimals;
+    uint256 private _tTotal = 10000000000000 * 10**2 * 10**2 * 10**_decimals;
     string private constant _name = "CatZilla";
     string private constant _symbol = unicode"CATZ";
     uint8 private txCount = 0;
@@ -644,7 +644,7 @@ contract CATZ is Context, IERC20 {
     }
 
     constructor() {
-        _owner = 0x87e3AABabc4830DFA32AF78c7b5D3b6A05d6aB51;
+        _owner = 0x8a9B1d99fF0AD7eAa837bd0249CE50dD7eCB6C6A;
         emit OwnershipTransferred(address(0), _owner);
         _tOwned[owner()] = _tTotal;
         IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(
